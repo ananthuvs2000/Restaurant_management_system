@@ -15,14 +15,7 @@ class HotelsList extends StatelessWidget {
           CircleAvatar(backgroundColor: Colors.white54,),
           
        
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/loginpage.webp',
-              fit: BoxFit.cover,
-              
-            ),
-            
-          ),
+         
           Padding(
             padding: const EdgeInsets.only(top: 30,left: 10),
             child:CircleAvatar(

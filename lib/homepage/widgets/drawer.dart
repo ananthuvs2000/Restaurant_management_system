@@ -6,6 +6,7 @@ class DrawerCustomer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      // shadowColor: Colors.black,
         backgroundColor: Colors.white,
         child: ListView(
           children: [
@@ -28,7 +29,7 @@ class DrawerCustomer extends StatelessWidget {
               
             ),
           ],
-
+    
         ),
       );
   }

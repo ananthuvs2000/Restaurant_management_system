@@ -30,13 +30,15 @@ class _SliderScreenState extends State<SliderScreen> {
                   margin: EdgeInsets.only(left: 2,right: 2),
                   decoration: BoxDecoration(
                     
-                    color: Colors.grey,
+                    color: Colors.white,
                   ),
+                  child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10), 
                   child: Image.asset(
                     image,
                    
                     fit: BoxFit.cover,
-                  ),
+                  ),),
                 );
               },
             );
@@ -57,12 +59,12 @@ class _SliderScreenState extends State<SliderScreen> {
           children: _imageList.map((image) {
             int index = _imageList.indexOf(image);
             return Container(
-              width: 10.0,
+              width: 20.0,
               height: 10.0,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _currentIndex == index ? Colors.blue : Colors.grey,
+                borderRadius: BorderRadius.circular(20),
+                color: _currentIndex == index ? Colors.grey.shade800 : Colors.grey,
               ),
             );
           }).toList(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:myproject/hotels/hotels.dart';
 
 class HotelCard extends StatelessWidget {
@@ -12,7 +13,7 @@ class HotelCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10), ),
         margin: EdgeInsets.all(10),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.all(4),
           child: InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => HotelsList(),));
@@ -20,28 +21,29 @@ class HotelCard extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 30),
-                  child: Image.asset('assets/images/hotel1.jpeg'),
+                  padding: const EdgeInsets.only(bottom: 5,top: 5),
+                    child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10), 
+                  child: Image.asset('assets/images/hotel1.jpeg'),),
                 ),
                 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Hotel Rahmath',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600),),
+                    Text('Hotel Rahmath',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),),
+                    
                     Text('4.5'),
                   ],
                 ),
                 
                     Padding(
                       padding: const EdgeInsets.only(bottom: 5),
-                      child: Row(
+                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Near 2nd gate,Calicut'),
+                          Text('Near 2nd gate,Calicut',style: TextStyle(fontSize: 12),),
+                          Icon(FontAwesomeIcons.star,size: 10,color: Colors.yellow,)
                         ],
                       ),
-                    ),
-                    
-                  
-                
+                    ),      
               ],
               
             ),
