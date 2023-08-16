@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myproject/homepage/home.dart';
+import 'package:myproject/screens/homepage/home.dart';
 
-import 'package:myproject/signup/view/customersignup.dart';
+import 'package:myproject/screens/signup/customersignup.dart';
 
 
 

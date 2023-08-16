@@ -1,40 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:myproject/menutiles/widgets/selction.dart';
+import 'package:myproject/screens/hotels/itemselection/singleitemselction.dart';
 
 class MenuTile extends StatefulWidget {
-   MenuTile({super.key});
+  MenuTile({super.key});
 
   @override
   State<MenuTile> createState() => _MenuTileState();
 }
 
 class _MenuTileState extends State<MenuTile> {
-  int _counter=0;
+  int _counter = 0;
   void quantityAdd() {
     setState(() {
       _counter++;
     });
   }
-  void quantityLess(){
+
+  void quantityLess() {
     setState(() {
       _counter--;
     });
   }
-  final String? title='Chicken Biriyani';
+
+  final String? title = 'Chicken Biriyani';
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        
         child: ListTile(
-       
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ItemSelection(),)),
+          onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ItemSelection(title: title!),
+              )),
           title: Text(title!),
           leading: CircleAvatar(
             radius: 40,
             backgroundImage: AssetImage('assets/images/hotel1.jpeg'),
-            
           ),
           subtitle: Text('Availability'),
           trailing: Text('100/-'),

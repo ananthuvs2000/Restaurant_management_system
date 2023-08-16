@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myproject/cards/view/hotelcard.dart';
+import 'package:myproject/screens/homepage/cards/view/hotelcard.dart';
 
 import '../widgets/slider.dart';
 

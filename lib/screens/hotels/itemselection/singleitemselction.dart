@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myproject/screens/cartpage/view/cartpage.dart';
 import 'package:myproject/widget/dropdown.dart';
 
 class ItemSelection extends StatefulWidget {
-  const ItemSelection({super.key});
+   ItemSelection({required this.title,super.key});
+  String title;
   
   
 
@@ -59,7 +61,7 @@ class _ItemSelectionState extends State<ItemSelection> {
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                             
-                              Text('Chicken Biriyani',style: TextStyle(color: Colors.black87,fontSize: 20),),
+                              Text('${widget.title}',style: TextStyle(color: Colors.black87,fontSize: 20),),
                               Container(
                                 height: 40,
                                 width: 110,
@@ -90,13 +92,14 @@ class _ItemSelectionState extends State<ItemSelection> {
                               Text('$gst'),
                             ],
                           ),
-                          SizedBox(height: 25,),
+                          SizedBox(height: 20,),
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text('Total Amount'),
                               Text('${_counter*100+gst}')
                             ],
                           ),
+                          SizedBox(height: 20),
                            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text('Add a coupon'),
@@ -119,7 +122,7 @@ class _ItemSelectionState extends State<ItemSelection> {
                                             ),
                                           ),
                                           ElevatedButton(onPressed: () {
-                                            Navigator.push(context, MaterialPageRoute(builder: (context) => ItemSelection(),));
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => ItemSelection(title: widget.title),));
                                           }, child: Text('Apply')),
                                         ],
                                       ),
@@ -157,6 +160,9 @@ class _ItemSelectionState extends State<ItemSelection> {
                 ),
                           ),
                       onPressed: () {
+                        num totalAmount = _counter * 100 + gst;
+                        Get.to(CartPage(totalamount: totalAmount));
+
                         Get.snackbar('Added', 'Items added to cart',icon:Icon( Icons.shopping_cart_outlined),snackPosition: SnackPosition.BOTTOM);
                       
                     }, child: Text('Add to Cart')),

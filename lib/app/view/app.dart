@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myproject/l10n/l10n.dart';
 import 'package:myproject/login/view/loginpage.dart';
-import 'package:myproject/splashscreen/splashscreen.dart';
+import 'package:myproject/screens/splashscreen/splashscreen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

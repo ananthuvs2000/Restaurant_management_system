@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:myproject/cards/view/hotelcard.dart';
-import 'package:myproject/cards/widgets/drawertile.dart';
-import 'package:myproject/homepage/widgets/drawer.dart';
-import 'package:myproject/homepage/widgets/floatingaction.dart';
-import 'package:myproject/homepage/widgets/navigation_bar.dart';
-import 'package:myproject/homepage/widgets/searchbar.dart';
-import 'package:myproject/homepage/widgets/slider.dart';
-
-
-
+import 'package:myproject/screens/homepage/cards/view/hotelcard.dart';
+import 'package:myproject/screens/homepage/widgets/drawer.dart';
+import 'package:myproject/screens/homepage/widgets/floatingaction.dart';
+import 'package:myproject/screens/homepage/widgets/navigation_bar.dart';
+import 'package:myproject/screens/homepage/widgets/searchbar.dart';
+import 'package:myproject/screens/homepage/widgets/slider.dart';
 
 
 class HomePage extends StatefulWidget {
